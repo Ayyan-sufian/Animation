@@ -1,5 +1,6 @@
 import 'package:animation/3D-list.dart';
 import 'package:animation/detail_pg.dart';
+import 'package:animation/shared-data.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -158,7 +159,10 @@ class _MyHomePageState extends State<MyHomePage>
               width: animation.value,
               height: animation.value,
               color: Colors.blueGrey,
-            )
+            ),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => shareDataPg(),));
+            }, child: Text('Share data'))
           ],
         ),
       ),
